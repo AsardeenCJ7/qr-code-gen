@@ -52,6 +52,9 @@ const QRCode = () => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+      })
+      .catch((error) => {
+        console.log("Error downloading QR code", error);
       });
   }
 
