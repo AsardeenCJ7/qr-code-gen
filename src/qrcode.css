@@ -72,6 +72,13 @@ button {
   background-color: #219a52;
 }
 
+.buttonContainer {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center; /* Optional: center the buttons */
+  margin-top: 20px; /* Optional: space from other content */
+}
+
 .footer {
   margin-top: 50px;
 }

@@ -4,9 +4,12 @@ import "./qrcode.css";
 const QRCode = () => {
   const [img, setImg] = useState("");
   const [loading, setLoading] = useState(false);
-  const [qrData, setQRData] = useState("www.youtube.com");
+  const [qrData, setQRData] = useState(
+    "https://asardeencj7.github.io/qr-code-gen/"
+  );
   const [size, setSize] = useState(250);
   const [countdown, setCountdown] = useState("");
+
   console.log(img);
 
   async function generateQR() {
@@ -96,12 +99,14 @@ const QRCode = () => {
           Generate QR Code
         </button> */}
 
-        <button className="genBtn" onClick={generateQR} disabled={loading}>
-          Generate QR Code
-        </button>
-        <button className="downBtn" onClick={downloadQR}>
-          Download QR Code
-        </button>
+        <div className="buttonContainer">
+          <button className="genBtn" onClick={generateQR} disabled={loading}>
+            Generate QR Code
+          </button>
+          <button className="downBtn" onClick={downloadQR}>
+            Download QR Code
+          </button>
+        </div>
       </div>
       <p className="footer">
         Designed by : <a href="">AsardeenDev7</a>
